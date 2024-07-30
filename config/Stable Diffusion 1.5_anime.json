@@ -1,0 +1,11 @@
+{
+    "gpu": 0,
+    "steps": 20,
+    "feature_path": "/home/yfyuan/YYF/Rerender/exp/attn_map/",
+    "sd_model": "Stable Diffusion 1.5",
+    "prompt": "in anime style",
+    "a_prompt": "high detailed,  pixiv, art station",
+    "n_prompt": "extra digit, fewer digits, cropped, worst quality, low quality, blue",
+    "x0_strength": 0.4,
+    "use_control": true
+}
