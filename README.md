@@ -21,12 +21,6 @@
 
 **TL;DR:** SDEdit-style image-to-image translation with Stable Diffusion often *hallucinates content that is not in the reference image* (a cocktail glass becomes a face, a sketch of a lamp becomes a bottle...). We trace this **semantic discrepancy** to the noise added by SDEdit, which makes unrelated regions correlated after the U-Net up-sampling layers. We fix it **without any training**: the correct correlations and features are taken from a **single step of DDIM inversion** and plugged into the generation. The method is plug-and-play for any SD-1.x checkpoint and ControlNet, and **11.2× faster than PnP**.
 
-## 📰 News
-
-- **2026-10** — 🔥 Code refactored on top of 🤗 diffusers: plug-and-play refinements for any SD-1.x checkpoint, ControlNet support, a Gradio demo, batch translation and evaluation scripts, unit tests.
-- **2025-04** — Published in *IEEE/CAA Journal of Automatica Sinica*, 12(4): 705–718.
-- **2024-07** — Initial release of the research code.
-
 ## 🔍 Method
 
 <p align="center"><img src="assets/framework.png" width="100%"></p>
@@ -224,10 +218,6 @@ If you find this work useful, please consider citing:
   doi     = {10.1109/JAS.2024.124800}
 }
 ```
-
-## 🙏 Acknowledgements
-
-This work builds on [Stable Diffusion](https://github.com/CompVis/stable-diffusion), [🤗 diffusers](https://github.com/huggingface/diffusers), [ControlNet](https://github.com/lllyasviel/ControlNet) and [SDEdit](https://github.com/ermongroup/SDEdit), and was inspired by [Plug-and-Play](https://github.com/MichalGeyer/plug-and-play) and [Prompt-to-Prompt](https://github.com/google/prompt-to-prompt). The original research code was developed on top of [Rerender-A-Video](https://github.com/williamyang1991/Rerender_A_Video). It was supported in part by the National Natural Science Foundation of China (No. 62176059).
 
 ## 📄 License
 
